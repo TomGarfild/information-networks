@@ -1,0 +1,133 @@
+﻿@using SurveyBuilder.Common
+@model SurveyBuilder.Controllers.Dtos.CreateSurveyDto
+
+<h2>Create Survey</h2>
+
+<form asp-action="Create" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.EditorFor(m => m.Description, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+    </div>
+    <h4>Questions</h4>
+    <div id="questions">
+        @for (int i = 0; i < Model.Questions.Count; i++)
+        {
+            <div class="question-container">
+                <div class="form-group">
+                    <input type="hidden" name="Questions[@i].SurveyId" value="@Model.Id"/>
+                    @Html.LabelFor(m => m.Questions[i].Type)
+                    <select name="Questions[@i].Type" class="form-control question-type" onchange="handleQuestionTypeChange(this)">
+                        <option value="@QuestionType.Text">Text</option>
+                        <option value="@QuestionType.MultipleChoice">Multiple Choice</option>
+                        <option value="@QuestionType.Checkbox">Checkbox</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Questions[i].Text)
+                    @Html.EditorFor(m => m.Questions[i].Text, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.Questions[i].Text, "", new { @class = "text-danger" })
+                </div>
+                
+                <div class="form-group question-options" style="display:none;">
+                    <label>Options</label>
+                    <div class="options-container">
+                        @for (int j = 0; j < Model.Questions[i].Options.Count; j++)
+                        {
+                            <div class="form-group">
+                                @Html.EditorFor(m => m.Questions[i].Options[j].OptionText, new { htmlAttributes = new { @class = "form-control" } })
+                                <input type="hidden" name="Questions[@i].Options[@j].QuestionId" value="@Model.Questions[i].Id" />
+                            </div>
+                        }
+                    </div>
+                    <button type="button" class="btn btn-secondary add-option" data-question-index="@i">Add Option</button>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <button type="button" id="add-question" class="btn btn-primary">Add Question</button>
+    
+    <br /><br />
+    <input type="submit" value="Create Survey" class="btn btn-success" />
+</form>
+
+<script>
+    let questionIndex = @Model.Questions.Count;
+    
+        function handleQuestionTypeChange(selectElement) {
+            const questionContainer = selectElement.closest('.question-container');
+            const questionOptions = questionContainer.querySelector('.question-options');
+    
+            if (selectElement.value === 'MultipleChoice' || selectElement.value === 'Checkbox') {
+                questionOptions.style.display = 'block';
+            } else {
+                questionOptions.style.display = 'none';
+            }
+        }
+    
+        document.getElementById("add-question").addEventListener("click", function () {
+            const questionDiv = document.createElement("div");
+            questionDiv.classList.add("question-container");
+            
+            const surveyId = '@Model.Id';
+    
+            const typeSelect = document.createElement("select");
+            typeSelect.name = `Questions[${questionIndex}].Type`;
+            typeSelect.classList.add("form-control", "question-type");
+            typeSelect.innerHTML = `
+                <option value="Text">Text</option>
+                <option value="MultipleChoice">Multiple Choice</option>
+                <option value="Checkbox">Checkbox</option>
+            `;
+            typeSelect.addEventListener("change", function () {
+                handleQuestionTypeChange(typeSelect);
+            });
+    
+            const questionTextInput = document.createElement("input");
+            questionTextInput.type = "text";
+            questionTextInput.name = `Questions[${questionIndex}].Text`;
+            questionTextInput.classList.add("form-control");
+            questionTextInput.placeholder = "Enter your question";
+            
+            const surveyIdInput = document.createElement("input");
+            surveyIdInput.type = "hidden";
+            surveyIdInput.name = `Questions[${questionIndex}].SurveyId`;
+            surveyIdInput.value = surveyId;
+    
+            const optionsContainer = document.createElement("div");
+            optionsContainer.classList.add("options-container");
+            
+            const addOptionButton = document.createElement("button");
+            addOptionButton.type = "button";
+            addOptionButton.classList.add("btn", "btn-secondary", "add-option");
+            addOptionButton.textContent = "Add Option";
+            addOptionButton.dataset.questionIndex = questionIndex;
+            
+            addOptionButton.addEventListener("click", function () {
+                const optionInput = document.createElement("input");
+                optionInput.type = "text";
+                optionInput.name = `Questions[${questionIndex}].Options[]`;
+                optionInput.classList.add("form-control");
+                optionInput.placeholder = "Enter option";
+    
+                optionsContainer.appendChild(optionInput);
+            });
+    
+            questionDiv.appendChild(typeSelect);
+            questionDiv.appendChild(questionTextInput);
+            questionDiv.appendChild(optionsContainer);
+            questionDiv.appendChild(addOptionButton);
+            document.getElementById("questions").appendChild(questionDiv);
+    
+            questionIndex++;
+        });
+</script>

@@ -1,0 +1,16 @@
+﻿@model SurveyBuilder.Controllers.Dtos.SurveyDto
+
+<h2>@Model.Title</h2>
+<p>@Model.Description</p>
+
+<form asp-action="Take" method="post">
+    @foreach (var question in Model.Questions)
+    {
+        <div class="form-group">
+            <label>@question.Text</label>
+            <input type="text" name="answers[@question.Id]" class="form-control" />
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Submit Answers</button>
+</form>

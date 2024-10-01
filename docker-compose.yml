@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  surveydb:
+    container_name: surveydb
+    image: postgres:16.0
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - surveydb:/var/lib/postgresql/data
+volumes:
+  surveydb:
+    driver: local

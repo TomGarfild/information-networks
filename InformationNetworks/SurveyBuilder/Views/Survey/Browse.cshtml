@@ -1,0 +1,14 @@
+﻿@model IEnumerable<SurveyBuilder.Controllers.Dtos.SurveyDto>
+
+<h2>Browse Surveys</h2>
+
+<ul>
+    @foreach (var survey in Model)
+    {
+        <li>
+            <h3>@survey.Title</h3>
+            <p>@survey.Description</p>
+            <a href="/Survey/Take/@survey.Id">Take Survey</a>
+        </li>
+    }
+</ul>

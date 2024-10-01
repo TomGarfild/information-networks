@@ -1,0 +1,16 @@
+﻿<h2>Welcome to the Survey Builder</h2>
+<p>This is the home page of your application. From here, you can navigate to other parts of the application.</p>
+
+@if (User.Identity == null || !User.Identity.IsAuthenticated)
+{
+    <a href="/Users/Register">Register</a>
+    <a href="/Users/Login">Login</a>
+}
+else
+{
+    <p>
+        <a href="/Users/Logout">Logout</a>
+    </p>
+    <a href="/Survey/Create">Create New Survey</a>
+    <a href="/Survey/Browse">Browse</a>
+}
