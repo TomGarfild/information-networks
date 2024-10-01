@@ -4,6 +4,7 @@
 <p>@Model.Description</p>
 
 <form asp-action="Take" method="post">
+    <input type="hidden" name="SurveyId" value="@Model.Id" />
     @foreach (var question in Model.Questions)
     {
         <div class="form-group">

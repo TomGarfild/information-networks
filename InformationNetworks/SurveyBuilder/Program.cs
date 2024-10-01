@@ -2,7 +2,6 @@ using System.Reflection;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using SurveyBuilder.Data;
 using SurveyBuilder.Data.Repositories;
 using SurveyBuilder.Domain.Models;
@@ -19,10 +18,6 @@ services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
 services.AddControllersWithViews();
-/*services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Survey Builder", Version = "v1" });
-});*/
 
 services.AddAuthentication()
     .AddGoogle(options => {
@@ -48,7 +43,6 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
@@ -56,15 +50,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-/*
-app.UseSwagger();
-
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-    c.RoutePrefix = string.Empty;
-});
-*/
 
 app.Run();

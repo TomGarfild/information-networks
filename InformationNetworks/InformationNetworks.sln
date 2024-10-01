@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyBuilder", "SurveyBuilder\SurveyBuilder.csproj", "{F336CF33-080D-43D4-A467-F34F6ADECE07}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyBuilder.Data", "SurveyBuilder.Data\SurveyBuilder.Data.csproj", "{40A5A347-C61C-43AA-91C7-5CD62E7A314B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyBuilder.Domain", "SurveyBuilder.Domain\SurveyBuilder.Domain.csproj", "{4F28E6BE-62AD-467F-8BAE-C5E0366D3B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyBuilder", "SurveyBuilder\SurveyBuilder.csproj", "{B3DCD213-1A39-4A4B-81D4-831C2D69D233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,10 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F336CF33-080D-43D4-A467-F34F6ADECE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F336CF33-080D-43D4-A467-F34F6ADECE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F336CF33-080D-43D4-A467-F34F6ADECE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F336CF33-080D-43D4-A467-F34F6ADECE07}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40A5A347-C61C-43AA-91C7-5CD62E7A314B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40A5A347-C61C-43AA-91C7-5CD62E7A314B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40A5A347-C61C-43AA-91C7-5CD62E7A314B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -24,5 +20,9 @@ Global
 		{4F28E6BE-62AD-467F-8BAE-C5E0366D3B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F28E6BE-62AD-467F-8BAE-C5E0366D3B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F28E6BE-62AD-467F-8BAE-C5E0366D3B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DCD213-1A39-4A4B-81D4-831C2D69D233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DCD213-1A39-4A4B-81D4-831C2D69D233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DCD213-1A39-4A4B-81D4-831C2D69D233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DCD213-1A39-4A4B-81D4-831C2D69D233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

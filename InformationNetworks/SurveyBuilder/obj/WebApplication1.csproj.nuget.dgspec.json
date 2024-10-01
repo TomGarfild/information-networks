@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\univer\\course5\\information-networks\\InformationNetworks\\SurveyBuilder\\SurveyBuilder.csproj": {}
+    "D:\\univer\\course5\\information-networks\\InformationNetworks\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\univer\\course5\\information-networks\\InformationNetworks\\SurveyBuilder\\SurveyBuilder.csproj": {
+    "D:\\univer\\course5\\information-networks\\InformationNetworks\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\course5\\information-networks\\InformationNetworks\\SurveyBuilder\\SurveyBuilder.csproj",
-        "projectName": "SurveyBuilder",
-        "projectPath": "D:\\univer\\course5\\information-networks\\InformationNetworks\\SurveyBuilder\\SurveyBuilder.csproj",
+        "projectUniqueName": "D:\\univer\\course5\\information-networks\\InformationNetworks\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "D:\\univer\\course5\\information-networks\\InformationNetworks\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\Oleksii\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\course5\\information-networks\\InformationNetworks\\SurveyBuilder\\obj\\",
+        "outputPath": "D:\\univer\\course5\\information-networks\\InformationNetworks\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oleksii\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -11,7 +11,6 @@ using SurveyBuilder.Domain.Queries;
 namespace SurveyBuilder.Controllers;
 
 [Authorize]
-[ApiController]
 public class SurveyController(IMediator mediator, UserManager<ApplicationUser> userManager) : Controller
 {
     [HttpGet]

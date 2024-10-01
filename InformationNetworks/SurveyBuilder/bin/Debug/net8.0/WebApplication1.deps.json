@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "SurveyBuilder/1.0.0": {
+      "WebApplication1/1.0.0": {
         "dependencies": {
           "Mapster": "7.4.0",
           "MediatR": "12.4.1",
@@ -14,11 +14,10 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
-          "Swashbuckle.AspNetCore": "6.8.1"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
         },
         "runtime": {
-          "SurveyBuilder.dll": {}
+          "WebApplication1.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -397,7 +396,6 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
       "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
@@ -551,14 +549,6 @@
           }
         }
       },
-      "Microsoft.OpenApi/1.6.14": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.6.14.0",
-            "fileVersion": "1.6.14.0"
-          }
-        }
-      },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
           "System.CodeDom": "4.4.0"
@@ -592,44 +582,6 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "8.0.4.0",
             "fileVersion": "8.0.4.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore/6.8.1": {
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
-          "Swashbuckle.AspNetCore.Swagger": "6.8.1",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.8.1",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.8.1"
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/6.8.1": {
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.14"
-        },
-        "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "6.8.1.0",
-            "fileVersion": "6.8.1.756"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.8.1": {
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.8.1"
-        },
-        "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "6.8.1.0",
-            "fileVersion": "6.8.1.756"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.8.1": {
-        "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "6.8.1.0",
-            "fileVersion": "6.8.1.756"
           }
         }
       },
@@ -746,7 +698,7 @@
     }
   },
   "libraries": {
-    "SurveyBuilder/1.0.0": {
+    "WebApplication1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -898,13 +850,6 @@
       "path": "microsoft.entityframeworkcore.relational/8.0.8",
       "hashPath": "microsoft.entityframeworkcore.relational.8.0.8.nupkg.sha512"
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
-      "path": "microsoft.extensions.apidescription.server/6.0.5",
-      "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
-    },
     "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1031,13 +976,6 @@
       "path": "microsoft.identitymodel.tokens/7.1.2",
       "hashPath": "microsoft.identitymodel.tokens.7.1.2.nupkg.sha512"
     },
-    "Microsoft.OpenApi/1.6.14": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-tTaBT8qjk3xINfESyOPE2rIellPvB7qpVqiWiyA/lACVvz+xOGiXhFUfohcx82NLbi5avzLW0lx+s6oAqQijfw==",
-      "path": "microsoft.openapi/1.6.14",
-      "hashPath": "microsoft.openapi.1.6.14.nupkg.sha512"
-    },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
       "serviceable": true,
@@ -1058,34 +996,6 @@
       "sha512": "sha512-/hHd9MqTRVDgIpsToCcxMDxZqla0HAQACiITkq1+L9J2hmHKV6lBAPlauF+dlNSfHpus7rrljWx4nAanKD6qAw==",
       "path": "npgsql.entityframeworkcore.postgresql/8.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore/6.8.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-JN6ccH37QKtNOwBrvSxc+jBYIB+cw6RlZie2IKoJhjjf6HzBH+2kPJCpxmJ5EHIqmxvq6aQG+0A8XklGx9rAxA==",
-      "path": "swashbuckle.aspnetcore/6.8.1",
-      "hashPath": "swashbuckle.aspnetcore.6.8.1.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.Swagger/6.8.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eOkdM4bsWBU5Ty3kWbyq5O9L+05kZT0vOdGh4a92vIb/LLQGQTPLRHXuJdnUBNIPNC8XfKWfSbtRfqzI6nnbqw==",
-      "path": "swashbuckle.aspnetcore.swagger/6.8.1",
-      "hashPath": "swashbuckle.aspnetcore.swagger.6.8.1.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.8.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TjBPxsN0HeJzxEXZYeDXBNNMSyhg+TYXtkbwX+Cn8GH/y5ZeoB/chw0p71kRo5tR2sNshbKwL24T6f9pTF9PHg==",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.8.1",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.6.8.1.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.8.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lpEszYJ7vZaTTE5Dp8MrsbSHrgDfjhDMjzW1qOA1Xs1Dnj3ZRBJAcPZUTsa5Bva+nLaw91JJ8OI8FkSg8hhIyA==",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.8.1",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.6.8.1.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",
