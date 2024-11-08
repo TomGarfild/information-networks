@@ -3,10 +3,10 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SurveyBuilder.Application.Commands;
+using SurveyBuilder.Application.Queries;
 using SurveyBuilder.Controllers.Dtos;
-using SurveyBuilder.Domain.Commands;
-using SurveyBuilder.Domain.Models;
-using SurveyBuilder.Domain.Queries;
+using SurveyBuilder.Domain.Domain.Models;
 
 namespace SurveyBuilder.Controllers;
 

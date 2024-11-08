@@ -1,21 +1,18 @@
 using System.Reflection;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using SurveyBuilder.Data;
-using SurveyBuilder.Data.Repositories;
-using SurveyBuilder.Domain.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
 
+/*
 services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
 services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>();
+    .AddEntityFrameworkStores<AppDbContext>();*/
 
 services.AddControllersWithViews();
 
@@ -30,9 +27,10 @@ services.AddMediatR(serviceConfiguration =>
 
 TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
 
+/*
 services
     .AddScoped<IRepository<Survey>, SurveyRepository>()
-    .AddScoped<IRepository<Response>, ResponseRepository>();
+    .AddScoped<IRepository<Response>, ResponseRepository>();*/
 
 var app = builder.Build();
 

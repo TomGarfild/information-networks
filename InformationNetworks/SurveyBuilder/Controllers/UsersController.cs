@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SurveyBuilder.Controllers.ViewModels;
-using SurveyBuilder.Domain.Models;
+using SurveyBuilder.Domain.Domain.Models;
 
 namespace SurveyBuilder.Controllers;
 

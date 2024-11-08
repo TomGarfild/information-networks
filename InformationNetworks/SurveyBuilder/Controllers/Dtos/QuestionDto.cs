@@ -1,4 +1,4 @@
-﻿using SurveyBuilder.Common;
+﻿using SurveyBuilder.Domain.Common;
 
 namespace SurveyBuilder.Controllers.Dtos;
 

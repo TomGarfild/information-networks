@@ -1,7 +1,4 @@
-﻿using SurveyBuilder.Common;
-using SurveyBuilder.Domain.Models;
-
-namespace SurveyBuilder.Controllers.Dtos;
+﻿namespace SurveyBuilder.Controllers.Dtos;
 
 public record QuestionOptionDto
 {

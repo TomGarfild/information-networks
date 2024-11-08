@@ -1,6 +1,6 @@
 ﻿using Mapster;
 using SurveyBuilder.Controllers.Dtos;
-using SurveyBuilder.Domain.Models;
+using SurveyBuilder.Domain.Domain.Models;
 
 namespace SurveyBuilder.MappingProfiles;
 
